@@ -17,7 +17,7 @@ const Index = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="rounded-3xl overflow-hidden bg-gradient-to-br from-[#9b87f5]/10 to-[#7E69AB]/10 aspect-square p-1"
+            className="rounded-3xl overflow-hidden bg-gradient-to-br from-[#9b87f5]/10 to-[#7E69AB]/10 aspect-[4/3] p-1" // Changed from aspect-square to aspect-[4/3]
           >
             <div className="w-full h-full rounded-2xl overflow-hidden">
               <img
