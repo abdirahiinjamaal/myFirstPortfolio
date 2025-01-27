@@ -63,7 +63,7 @@ const Index = () => {
                 <span className="text-2xl   bg-gradient-to-r from-[#9b87f5] to-[#7E69AB] text-transparent bg-clip-text">
                   2
                 </span>{" "}
-                years of expreince , {" "}
+                years of expreince ,{" "}
                 <span className="bg-gradient-to-r from-[#9b87f5] to-[#7E69AB] text-transparent bg-clip-text">
                   4 projects
                 </span>{" "}
@@ -92,6 +92,14 @@ const Index = () => {
             </div>
 
             <div className="flex gap-6 pt-6">
+              <motion.span
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="text-[#9b87f5] inline-block px-5 py-2 bg-[#9b87f5]/10 backdrop-blur-sm rounded-full text-sm font-medium"
+              >
+                connect in social media
+              </motion.span>
               <a
                 href="https://github.com"
                 target="_blank"
@@ -101,7 +109,7 @@ const Index = () => {
                 <Github className="w-6 h-6 text-[#9b87f5]" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-[#9b87f5]/10 rounded-full hover:bg-[#9b87f5]/15 transition-all duration-300 hover:shadow-lg hover:shadow-[#9b87f5]/20"
