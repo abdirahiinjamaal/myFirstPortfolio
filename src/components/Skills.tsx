@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  { name: "Frontend Development", level: 90 },
-  { name: "Backend Development", level: 85 },
-  { name: "UI/UX Design", level: 80 },
-  { name: "Database Management", level: 85 },
-  { name: "DevOps", level: 75 },
-  { name: "Mobile Development", level: 70 },
+  {name:'html',level:99},
+  {name:'Css',level:97},
+  { name: "React js", level: 95 },
+  { name: "TailwindCss", level: 95 },
+  {name:'Supabase',level:85},
 ];
 
 export const Skills = () => {

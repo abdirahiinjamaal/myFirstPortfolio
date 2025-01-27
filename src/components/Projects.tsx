@@ -1,31 +1,47 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, RouterIcon } from "lucide-react";
+import { FaHtml5, FaJs, FaCss3, FaReact } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiReactrouter, SiSupabase } from "react-icons/si";
 
 const projects = [
   {
-    title: "Project One",
-    description: "A modern web application built with React and Node.js",
-    tech: ["React", "Node.js", "MongoDB"],
+    title: "E-commerce ",
+    description:
+      "A modern e-commerce web built with html , css  and javascript",
+    tech: [
+      { name: "html5", icon: <FaHtml5 /> },
+      { name: "css3", icon: <FaCss3 /> },
+      { name: "Javascript", icon: <FaJs /> },
+    ],
     github: "#",
     live: "#",
-    image: "/placeholder.svg"
+    image: "/placeholder.svg",
   },
   {
-    title: "Project Two",
-    description: "Real-time chat application with WebSocket integration",
-    tech: ["TypeScript", "Socket.io", "Express"],
+    title: "Jop portal",
+    description: "find and land your career jop ",
+    tech: [
+      { name: "TailwindCss", icon: <RiTailwindCssFill /> },
+      { name: "React js", icon: <FaReact /> },
+    ],
     github: "#",
     live: "#",
-    image: "/placeholder.svg"
+    image: "/placeholder.svg",
   },
   {
-    title: "Project Three",
-    description: "E-commerce platform with payment integration",
-    tech: ["Next.js", "Stripe", "PostgreSQL"],
+    title: "Task manager ",
+    description: "let's build task manager with react and supabase",
+    tech: [
+      { name: "React js", icon: <FaReact /> },
+      { name: "Tailwindcss", icon: <RiTailwindCssFill /> },
+      { name: "React Router v6", icon: <SiReactrouter /> },
+      {name:'Supabase',icon:<SiSupabase/>}
+    ],
     github: "#",
     live: "#",
-    image: "/placeholder.svg"
-  }
+    image: "/placeholder.svg",
+  },
 ];
 
 export const Projects = () => {
@@ -42,7 +58,9 @@ export const Projects = () => {
           <span className="text-slate inline-block mb-4 px-4 py-1.5 bg-silver/30 backdrop-blur-sm rounded-full text-sm">
             Portfolio
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Featured Projects
+          </h2>
           <p className="text-slate max-w-xl mx-auto">
             A selection of my recent work, showcasing web development expertise
           </p>
@@ -69,12 +87,15 @@ export const Projects = () => {
               <p className="text-slate mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.tech.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="text-xs px-3 py-1 bg-silver/10 rounded-full"
-                  >
-                    {tech}
-                  </span>
+                  <>
+                    <span
+                      key={i}
+                      className="text-xs flex items-center gap-3 px-3 py-1 bg-silver/10 rounded-full"
+                    >
+                      {tech.name}
+                      <span> {tech.icon}</span>
+                    </span>
+                  </>
                 ))}
               </div>
               <div className="flex gap-4">
