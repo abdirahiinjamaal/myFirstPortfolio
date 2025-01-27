@@ -11,7 +11,7 @@ const Index = () => {
     <div className="bg-gradient-to-b from-[#1A1F2C] to-[#2C2F3B] text-silver min-h-screen ">
       <Navigation />
       <div className="container mx-w-[20%] px-4 py-32">
-        <div className="grid md:max-w-[80%] md:mx-auto grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div className="md:grid flex md:flex-none md:max-w-[80%] md:mx-auto grid-cols-1 flex-col-reverse  md:grid-cols-2 gap-16 items-center">
           {/* Image Column */}
           <motion.div
             initial={{ opacity: 0, x: -20, backgroundColor: "#9b87f5" }}
@@ -96,7 +96,7 @@ const Index = () => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-[#9b87f5] inline-block px-5 py-2 bg-[#9b87f5]/10 backdrop-blur-sm rounded-full text-sm font-medium"
+                className="text-[#9b87f5] text-center inline-block px-5 py-3 bg-[#9b87f5]/10 backdrop-blur-sm rounded-full text-sm font-medium"
               >
                 connect in social media
               </motion.span>
