@@ -63,9 +63,9 @@ const Index = () => {
                 <span className="text-2xl   bg-gradient-to-r from-[#9b87f5] to-[#7E69AB] text-transparent bg-clip-text">
                   2
                 </span>{" "}
-                years of expreince , worked over{" "}
+                years of expreince , {" "}
                 <span className="bg-gradient-to-r from-[#9b87f5] to-[#7E69AB] text-transparent bg-clip-text">
-                  10 projects
+                  4 projects
                 </span>{" "}
                 as free lencer and for my own projects
               </p>

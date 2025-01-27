@@ -1,7 +1,6 @@
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { ShieldClose,EyeClosed, ShieldAlert, HamIcon, Menu, DoorClosed, X } from "lucide-react";
+import {  Menu,  X } from "lucide-react";
 
 export const Navigation = () => {
   const { scrollYProgress } = useScroll();
