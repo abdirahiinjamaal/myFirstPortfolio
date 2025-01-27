@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-
+ import emailjs from "@emailjs/browser";
 export const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -11,14 +11,43 @@ export const Contact = () => {
   });
   const { toast } = useToast();
 
+ 
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", message: "" });
+
+    emailjs
+      .send(
+        "service_940biss", // Replace with your actual service ID from EmailJS
+        "template_nmijnkn", // Replace with your actual template ID from EmailJS
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        "AWDoqFxAa4LiJkoVa" // Replace with your public key from EmailJS
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          toast({
+            title: "Message sent!",
+            description:
+              "Thank you for reaching out. I'll get back to you soon.",
+          });
+          setFormData({ name: "", email: "", message: "" });
+        },
+        (error) => {
+          console.log("FAILED...", error);
+          toast({
+            title: "Message not sent!",
+            description: "Something went wrong. Please try again.",
+            variant: "destructive",
+          });
+        }
+      );
   };
+
 
   return (
     <section className="py-20 px-4" id="contact">

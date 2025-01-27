@@ -1,4 +1,3 @@
-import { Hero } from "@/components/Hero";
 import { Projects } from "@/components/Projects";
 import { Skills } from "@/components/Skills";
 import { Contact } from "@/components/Contact";
@@ -48,7 +47,7 @@ const Index = () => {
               >
                 Frontend-developer
               </motion.span>
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+              <h1 className="text-2xl md:text-5xl font-bold tracking-tight">
                 Hi, I'm{" "}
                 <span className="bg-gradient-to-r from-[#9b87f5] to-[#7E69AB] text-transparent bg-clip-text">
                   Abdirahiim!
@@ -71,7 +70,7 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-6">
+            <div className="md:flex hidden  flex-wrap gap-6">
               <motion.a
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -91,12 +90,12 @@ const Index = () => {
               </motion.a>
             </div>
 
-            <div className="flex gap-6 pt-6">
+            <div className="flex  gap-6 pt-6">
               <motion.span
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-[#9b87f5] text-center inline-block px-5 py-3 bg-[#9b87f5]/10 backdrop-blur-sm rounded-full text-sm font-medium"
+                className="text-[#9b87f5] text-center hidden  md:inline-block px-5 py-3 bg-[#9b87f5]/10 backdrop-blur-sm rounded-full text-sm font-medium"
               >
                 connect in social media
               </motion.span>
